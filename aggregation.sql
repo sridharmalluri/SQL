@@ -1,1 +1,23 @@
-
+---SELECT department_id, COUNT(*) AS total FROM hr.employees
+--GROUP BY department_id;
+--SELECT department_id, AVG(salary) AS avg_salary
+--FROM hr.employees
+--GROUP BY department_id;
+--select department_id,max(salary) as max_salary, min(salary) as min_salary from hr.employees group by department_id
+--select department_id, sum(salary) as total_salary from hr.employees group by department_id
+--select job_id ,count(*) as total_employees from hr.employees group by job_id
+--select job_id, avg(salary) as avg_salary from hr.employees group by job_id
+--select job_id,max(salary) as max_salary from hr.employees group by job_id
+--select job_id ,MIN(salary) as min_salary from hr.employees group by job_id
+--select job_id ,sum(salary) as total_salary from hr.employees group by job_id
+--select extract(year from hire_date) as hire_year ,count(*) as total_employees from hr.employees group by extract(year from hire_date) order by hire_year
+--select d.location_id, sum(e.salary) as total_salary from hr.employees e join departments on e.department_id =d.department_id group by d.location_id;
+--select manager_id,count(*) as team_size from hr.employees where manager_id is not null group by manager_id
+--select manager_id ,max(salary) as max_saalary from hr.employees where manager_id is not null group by manager_id
+--select manager_id ,avg(salary) as avg_salary from hr.employees where manager_id is not null group by manager_id
+---select extract (month from hire_date) as hire_month, count(*) as hired from hr.employees group by extract(month from hire_date) order by hire_month
+--select department_id , sum(salary) as total_salary from hr.employees group by department_id order by total_salary desc fetch first 1 row only
+--select job_id,avg(salary) as avg_salary from hr.employees group by job_id order by avg_salary desc fetch first 1 row only
+select city,count(*) as total_employees from hr.employees  join departments  on department_id=department_id join locations  on location_id=location_id group by city;
+--select department_id ,count(*) as employees_with_commission from hr.employees where commission_pct is not null group by department_id
+--select department_id ,sum(salary ) as total_salary_with_commission from hr.employees where commission_pct is not null group by DEPARTMENT_ID
